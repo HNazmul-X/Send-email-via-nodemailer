@@ -12,6 +12,10 @@ app.use(bodyParser.json())
 
 console.log(process.env.GMAIL_PASSWORD);
 
+app.get("/", (req, res)=> {
+    res.send(" <h1>Hello, Don't Worry I am working</h1> ")
+})
+
 app.post("/sendEmail", (req, res)=> {
     const sendingResponse = (sentResponse) => {
         res.send(sentResponse)
