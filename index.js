@@ -22,7 +22,7 @@ app.post("/sendEmail", (req, res)=> {
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "nazmul.sarlex@gmail.com",
+            user: `${process.env.GMAIL_EMAIL}`,
             pass: `${process.env.GMAIL_PASSWORD}`,
         },
     });
@@ -31,12 +31,13 @@ app.post("/sendEmail", (req, res)=> {
     
 
     const mailOptions = {
-        from: "nazmul.sarlex@gmail.com",
-        to: `${req.body.email}`,
-        subject: `Portfolio Email From ${req.body?.name}`,
+        from: `${process.env.GMAIL_EMAIL}`,
+        to: "nazmul.w3@gmail.com",
+        subject: `< ${req.body?.email}> Portfolio Email From ${req.body?.name} `,
         html: `
                   <div style="width:600px;padding:20px;border-radius: 20px; margin:auto;margin-top: 50px; background:lightskyblue; font-family:montserrat, Arial, Helvetica, sans-serif ">
                     <h1>Hello <br> I am <em><b style="color:yellow">${req.body?.name}</b></em></h1>
+                    <h3>Hello <br> My Email Adress is<em><b style="color:yellow">${req.body?.email}</b></em></h3>
 
                     <article style="margin-top:20px">
                         <p style="font-size: 14px;">${req.body?.massage}</p>
