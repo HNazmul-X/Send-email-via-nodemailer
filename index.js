@@ -4,6 +4,7 @@ const cors = require("cors")
 const bodyParser = require("body-parser")
 var nodemailer = require("nodemailer");
 require("dotenv").config()
+const PORT = process.env.PORT || 8080
 
 
 app.use(cors())
@@ -48,4 +49,4 @@ app.post("/sendEmail", (req, res)=> {
     
 })
 
-app.listen(8080 , ()=> console.log("app start succesfully"))
+app.listen(PORT , ()=> console.log("app start succesfully"))

@@ -1,12 +1,4 @@
 {
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "node-mailer": "^0.1.1",
-    "nodemailer": "^6.6.0"
-  },
   "name": "Send-email-via-nodemailer",
   "version": "1.0.0",
   "main": "index.js",
@@ -15,8 +7,25 @@
     "start:dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "node-mailer": "^0.1.1",
+    "nodemailer": "^6.6.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HNazmul/Send-email-via-nodemailer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HNazmul/Send-email-via-nodemailer/issues"
+  },
+  "homepage": "https://github.com/HNazmul/Send-email-via-nodemailer#readme"
 }
